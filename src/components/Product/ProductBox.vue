@@ -3,33 +3,38 @@
 
         <div class="embed-responsive embed-responsive-16by9">
             <img class="card-img-top embed-responsive-item" 
-            :src="category.imageUrl" 
+            :src="product.imageURL" 
             alt="Card image cap">
         </div>
         
         <div class="card-body">
-            <h5 class="card-title">{{ category.categoryName }}</h5>
+            <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">
-                {{ category.description }}
+                {{ product.description}}
             </p>
-            <router-link :to="{ name:'EditCategory', params: {id: category.id}}" 
-            v-show="$router.name == 'AdminCategory'">
-            <button class="btn btn-primary">Edit</button></router-link>
+            <router-link :to="{name:'EditProduct', params: {id: product.id}}">
+                <Button class="btn btn-primary">Edit</Button>
+            </router-link>
+            
         </div>
     </div>
 </template>
 
 
+
 <script>
 
     export default {
-        name: "CategoryBox",
-        props: ["category"],
+        name: "ProductBox",
+        props: ["product"],
         methods: {},
     };
 
 </script>
 
 <style scoped>
+    .card-img-top {
+        object-fit: cover;
+    }
 
 </style>
