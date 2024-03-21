@@ -3,7 +3,7 @@
       <!-- Navbar content -->
       <!--    Logo-->
       <router-link class="navbar-brand" :to="{ name: 'home' }">
-        <img id="logo" src="" />
+        <img id="logo" src="@\assets\house-icon.png" />
       </router-link>
       <!--    Burger Button-->
       <button
@@ -47,7 +47,7 @@
             </div>
           </div>
         </form>
-        <!--<router-link :to="{ name: 'Admin' }"> Admin </router-link>-->
+       <router-link :to="{ name: 'Admin' }"> Admin </router-link>
       </div>
     </nav>
   </template>
@@ -58,10 +58,15 @@
   </script>
   <style scoped>
   #logo {
-    width: 150px;
+    width: 70px;
+    height: 70px;
     margin-left: 20px;
     margin-right: 20px;
+
+    
   }
+
+
   a {
     color: white;
   }
