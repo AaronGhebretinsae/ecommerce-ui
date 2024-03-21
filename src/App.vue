@@ -3,7 +3,9 @@
   <router-view v-if="categories && products" 
   :baseURL="baseURL"
   :categories="categories"
-  :products="products"> </router-view>
+  :products="products"
+  @fetchData="fetchData"> 
+  </router-view>
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue"

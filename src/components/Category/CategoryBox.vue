@@ -12,11 +12,12 @@
             <p class="card-text">
                 {{ category.description }}
             </p>
-            <a href="#" class="btn btn-primary">Edit</a>
+            <router-link :to="{ name:'EditCategory', params: {id: category.id}}" 
+            v-show="$router.name == 'AdminCategory'">
+            <button class="btn btn-primary">Edit</button></router-link>
         </div>
     </div>
 </template>
-
 
 
 <script>

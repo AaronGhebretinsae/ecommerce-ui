@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col-4">
+            <div class="col-5">
                 <form>
                 <div class="form-group">
                     <label>Category Name</label>

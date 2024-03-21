@@ -32,6 +32,8 @@ import ProductBox from "@/components/Product/ProductBox";
     };
 </script>
 
-<style lang="scss" scoped>
-
+<style  scoped>
+.card-img-top {
+        object-fit: cover;
+    }
 </style>

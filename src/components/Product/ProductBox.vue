@@ -12,7 +12,10 @@
             <p class="card-text">
                 {{ product.description}}
             </p>
-            <a href="#" class="btn btn-primary">Edit</a>
+            <router-link :to="{name:'EditProduct', params: {id: product.id}}">
+                <Button class="btn btn-primary">Edit</Button>
+            </router-link>
+            
         </div>
     </div>
 </template>
