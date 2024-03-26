@@ -1,11 +1,14 @@
 <template>
-    <RouterLink :to="{name:'AdminCategory'}">
+    <div class="container py-4">
+        <RouterLink :to="{name:'AdminCategory'}">
         <button class="btn btn-primary btn-lg">View/Edit Categories</button>
     </RouterLink>
     <br/>
     <RouterLink :to="{name:'AdminProducts'}">
         <button class="btn btn-primary btn-lg">View/Edit Products</button>
     </RouterLink>
+    </div>
+   
     
 </template>
 
