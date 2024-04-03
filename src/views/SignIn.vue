@@ -55,7 +55,6 @@ import swal from 'sweetalert';
             return{
                 email: null,
                 password: null,
-                token: null,
               
             }
         },
@@ -71,8 +70,8 @@ import swal from 'sweetalert';
                     }
                     await axios.post(this.baseURL+'user/signIn', signInDto)
                     .then((res) => {
-                        this.token = res.data.token;
-                        this.$router.replace('/');
+                        localStorage.setItem("token",res.data.token);
+                        this.$router.push('/');
                         swal({
                             text: "Signed In Successfully",
                             icon: "success",
