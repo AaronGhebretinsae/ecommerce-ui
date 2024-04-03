@@ -57,8 +57,10 @@
             href="#" id="navbarAccount" 
             data-toggle="dropdown">Account</a>
             <div class="dropdown-menu" aria-labelledby="navbarAccount">
-              <router-link class="dropdown-item" :to="{name: 'SignUp'}">Sign Up</router-link>
-              <router-link class="dropdown-item" :to="{name: 'SignIn'}">Sign In</router-link>
+              <router-link class="dropdown-item" v-show="key == 0" :to="{name: 'SignUp'}">Sign Up</router-link>
+              <router-link class="dropdown-item" v-show="key == 0" :to="{name: 'SignIn'}">Sign In</router-link>
+              <router-link class="dropdown-item" v-show="key == 1"  :to="{name: 'Wishlist'}">Wishlist</router-link>
+              <router-link class="dropdown-item" :to="{name: 'home'}" v-show="key == 1"  @click="signout">Sign Out</router-link>
             </div>
           </li>
         </ul>
@@ -68,6 +70,22 @@
   <script>
   export default {
     name: "Navbar",
+    data () {
+      return{
+        key: 0,
+      }
+    },
+    methods: {
+      signout() {
+        localStorage.removeItem("token");
+        this.key = 0;
+      },
+    },
+    mounted () {
+      if(localStorage.getItem("token")){
+        this.key = 1;
+      }
+    },
   };
   </script>
   <style scoped>
