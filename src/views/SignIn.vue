@@ -10,7 +10,8 @@
         <!-- Header -->
         <div class="row">
             <div class="col-12 justify-content-center d-flex flex-row text-center pt-5">
-                <div id="signin-div" class="flex-item border">
+                <div id="signin-div" class="flex-item 
+                ">
                     <h2 class="pt-4">Sign In</h2>
                     <form @submit="signin" class="pt-4 pl-4 pr-4">
                         <div class="form-group">
